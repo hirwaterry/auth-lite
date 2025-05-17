@@ -1,2 +1,2 @@
 # auth-lite
-auth library
+auth package
