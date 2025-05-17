@@ -41,6 +41,16 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.get('/me', (req, res) => {
+  if (req.session && req.session.user) {
+    const { _id, username, email } = req.session.user;
+    res.json({ id: _id, username, email });
+  } else {
+    res.json(null);
+  }
+});
+
+
 router.get('/logout', (req, res) => {
   req.session.destroy(() => {
     res.clearCookie('connect.sid');

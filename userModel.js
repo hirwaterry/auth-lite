@@ -6,4 +6,4 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true }
 });
 
-module.exports = mongoose.model('AuthLiteUser', userSchema);
+module.exports = mongoose.model('Auth', userSchema);

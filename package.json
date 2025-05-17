@@ -1,19 +1,24 @@
 {
-  "name": "auth-lite",
-  "version": "1.0.0",
+  "name": "authjs-lite",
+  "version": "1.0.1",
   "main": "index.js",
   "description": "Simple express-session auth server for fullstack apps",
-  "keywords": ["auth", "session", "express", "login", "register"],
+  "keywords": [
+    "auth",
+    "session",
+    "express",
+    "login",
+    "register"
+  ],
   "author": "Terry",
   "license": "MIT",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
- 
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "body-parser": "^2.2.0",
+    "connect-mongo": "^5.1.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "express-session": "^1.18.1",

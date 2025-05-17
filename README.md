@@ -1,7 +1,7 @@
-# auth-lite
+# authjs-lite
 
-![npm version](https://img.shields.io/npm/v/auth-lite.svg)
-![license](https://img.shields.io/npm/l/auth-lite.svg)
+![npm version](https://img.shields.io/npm/v/authjs-lite.svg)
+![license](https://img.shields.io/npm/l/authjs-lite.svg)
 
 A lightweight plug-and-play Express authentication system using `express-session`.  
 Easily add login and register routes to any backend project with just a few lines.
@@ -10,15 +10,15 @@ Easily add login and register routes to any backend project with just a few line
 
 - 🚀 **Quick setup** - Integration in less than 5 minutes
 - 🔐 **Session-based authentication** - Secure cookie-based sessions
-- 🧱 **MongoDB integration** - Seamless user credential storage
-- ✅ **Ready-to-use routes** - `/auth/register`, `/auth/login`, `/auth/logout`
+- 🧱 **MongoDB integration** - Seamless user credential storage in 'Auth' collection
+- ✅ **Ready-to-use routes** - `/auth/register`, `/auth/login`, `/auth/logout`, `/auth/me`
 - 🪶 **Lightweight** - Minimal dependencies, small footprint
 - 🛡️ **Security focused** - Password hashing and secure sessions by default
 
 ## 📦 Installation
 
 ```bash
-npm install auth-lite
+npm install authjs-lite
 ```
 
 ## 🛠️ Usage
@@ -27,7 +27,7 @@ In your Express backend:
 
 ```javascript
 import express from 'express';
-import authLite from 'auth-lite';
+import authLite from 'authjs-lite';
 
 const app = express();
 
@@ -59,7 +59,7 @@ app.listen(4000, () => {
 Protect your routes with the included middleware:
 
 ```javascript
-import { requireAuth } from 'auth-lite';
+import { requireAuth } from 'authjs-lite';
 
 // Protect a single route
 app.get('/protected', requireAuth, (req, res) => {
@@ -113,6 +113,11 @@ app.use(authLite({
 ## 📝 License
 
 MIT
+
+### 🤝 Contributors
+
+- Manzi Dallas
+- Nkiko Hertie
 
 ## 🤝 Contributing
 
